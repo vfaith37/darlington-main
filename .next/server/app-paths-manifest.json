@@ -1,1 +1,4 @@
-{}
+{
+  "/event/page": "app/event/page.js",
+  "/press/page": "app/press/page.js"
+}

@@ -19,6 +19,7 @@ const config: Config = {
 			},
 			fontFamily: {
 				gallient: ['Gallient', 'sans-serif'],
+				satoshi: ['Satoshi', 'sans-serif'],
 			  },
 		},
 	},
