@@ -13,13 +13,13 @@ const Footer = () => {
 	};
 
 	return (
-		<footer className='flex items-center flex-col pt-12 bg-[#F4F4F4] text-black w-full'>
-			<div className='flex flex-col md:flex-row gap-9 justify-between sm:px-5 w-full px-8'>
-				<div>
-					<h1 className='font-bold'>NEWSLETTER</h1>
-					<p className="font-light text-[#606060]">Never miss out on any update from my website.</p>
-					<p className="font-light text-[#606060]">Subscribe to get exciting updates</p>
-					<h1 className='font-bold'>EMAIL</h1>
+		<footer className='flex flex-col pt-12 bg-[#F4F4F4] text-black w-full'>
+			<div className='flex flex-col lg:flex-row gap-9 lg:gap-1 xl:gap-9 sm:px-5 px-8 self-center'>
+				<div className='px-2'>
+					<h1 className='font-bold text-[16px] mb-4'>NEWSLETTER</h1>
+					<p className="font-light text-[#606060] text-[14px] mb-2">Never miss out on any update from my website.</p>
+					<p className="font-light text-[#606060] text-[14px] mb-4">Subscribe to get exciting updates</p>
+					<h1 className='font-bold text-[16px] mb-2'>EMAIL</h1>
 					<form onSubmit={handleSubmit} className="">
 						<input
 							type="email"
@@ -28,32 +28,33 @@ const Footer = () => {
 							value={email}
 							onChange={(e) => setEmail(e.target.value)}
 							required
-							className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+							placeholder='name@email.com'
+							className="mt-1 block w-full px-3 py-2 border bg-transparent border-gray-300 rounded-md placeholder-[#606060] focus:outline-none focus:ring-black focus:border-black sm:text-sm"
 						/>
 						<button type="submit" className="mt-4 w-full bg-black font-bold text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700">
 							Subscribe
 						</button>
 					</form>
 				</div>
-				<div className='flex flex-col items-center'>
-					<h1 className='font-bold'>SOCIAL MEDIA</h1>
-					<p className='font-light text-[#606060]'>Instagram</p>
-					<p className="font-light text-[#606060]">Facebook</p>
-					<p className="font-light text-[#606060]">Twitter (X)</p>
-					<p className="font-light text-[#606060]">Youtube</p>
+				<div className='flex flex-col items-center lg:items-start px-2'>
+					<h1 className='font-bold text-[16px] mb-4'>SOCIAL MEDIA</h1>
+					<p className="font-light text-[#606060] text-[14px] mb-2">Instagram</p>
+					<p className="font-light text-[#606060] text-[14px] mb-2">Facebook</p>
+					<p className="font-light text-[#606060] text-[14px] mb-2">Twitter (X)</p>
+					<p className="font-light text-[#606060] text-[14px]">Youtube</p>
 				</div>
-				<div className='flex flex-col items-center sm:items-start'>
-					<h1 className='font-bold'>AGENT MANAGERS</h1>
-					<p className="font-medium text-[#606060]">Music Manager:<span className="font-light text-[#606060]"> Mr Kels | Tel</span></p>
-					<p className="font-medium text-[#606060]">Social Manager:<span className="font-light text-[#606060]"> Francis Richard | Tel</span></p>
-					<p className="font-medium text-[#606060]">General Manager:<span className="font-light text-[#606060]"> Neveen Dominic | Tel</span></p>
+				<div className='flex flex-col items-center lg:items-start'>
+					<h1 className='font-bold text-[16px] mb-4'>AGENT MANAGERS</h1>
+					<p className="font-medium text-[#606060] mb-2">Music Manager:<span className="font-light text-[#606060] text-[14px] mb-2"> Mr Kels | Tel</span></p>
+					<p className="font-medium text-[#606060] mb-2">Social Manager:<span className="font-light text-[#606060] text-[14px] mb-2"> Francis Richard | Tel</span></p>
+					<p className="font-medium text-[#606060]">General Manager:<span className="font-light text-[#606060] text-[14px] mb-2"> Neveen Dominic | Tel</span></p>
 				</div>
-				<div className='hidden sm:flex sm:flex-col sm:items-center sm:items-start'>
-		<h1 className='font-bold'>OTHER USEFUL LINKS</h1>
-			<p className="font-light text-[#606060]">Brandon Williams.</p>
-			<p className="font-light text-[#606060]">Abido Shaker</p>
-			<p className="font-light text-[#606060]">Abido Shaker</p>
-			<p className="font-light text-[#606060]">Abido Shaker</p>
+				<div className='hidden sm:hidden lg:flex sm:flex-col sm:items-center lg:items-start px-2'>
+		<h1 className='font-bold text-[16px] mb-4'>OTHER USEFUL LINKS</h1>
+			<p className="font-light text-[#606060] text-[14px] mb-2">Brandon Williams.</p>
+			<p className="font-light text-[#606060] text-[14px] mb-2">Abido Shaker</p>
+			<p className="font-light text-[#606060] text-[14px] mb-2">Abido Shaker</p>
+			<p className="font-light text-[#606060] text-[14px]">Abido Shaker</p>
 			</div>
 			</div>
 			<div className="w-[90%] h-px bg-gray-300 mb-2 mt-8" />

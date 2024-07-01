@@ -20,9 +20,22 @@ const config: Config = {
 			fontFamily: {
 				gallient: ['Gallient', 'sans-serif'],
 				satoshi: ['Satoshi', 'sans-serif'],
-			  },
+					},
+					gridTemplateColumns: {
+				'masonry': 'repeat(auto-fill, minmax(200px, 1fr))',
+					},
+					spacing: {
+				'5': '1.25rem',
+				'8': '2rem',
+					}
 		},
 	},
+	variants: {
+		extend: {
+		  gridColumn: ['responsive'],
+		  gridRow: ['responsive'],
+		},
+	  },
 	plugins: [],
 };
 export default config;

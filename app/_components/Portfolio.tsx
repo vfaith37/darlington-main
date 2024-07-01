@@ -1,34 +1,29 @@
-import React from 'react'
+import React from 'react';
 
 const _Portfolio: React.FC = () => {
-	const images: string[] = [
-		"https://img.freepik.com/premium-photo/fun-party-with-dj_23-2151108189.jpg?size=626&ext=jpg&ga=GA1.1.2094443500.1708599870",
-		"https://img.freepik.com/free-photo/group-afro-americans-working-together_1303-8977.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/premium-photo/portrait-happy-young-casual-man-standing_171337-29744.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/premium-photo/group-people-connected-by-network-generative-ai_97167-3834.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/premium-photo/fun-party-with-dj_23-2151108189.jpg?size=626&ext=jpg&ga=GA1.1.2094443500.1708599870",
-		"https://img.freepik.com/free-photo/group-afro-americans-working-together_1303-8977.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/premium-photo/group-people-connected-by-network-generative-ai_97167-3834.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/premium-photo/portrait-happy-young-casual-man-standing_171337-29744.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/premium-photo/fun-party-with-dj_23-2151108189.jpg?size=626&ext=jpg&ga=GA1.1.2094443500.1708599870",
-		"https://img.freepik.com/free-photo/group-afro-americans-working-together_1303-8977.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/premium-photo/group-people-connected-by-network-generative-ai_97167-3834.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/premium-photo/portrait-happy-young-casual-man-standing_171337-29744.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
-		"https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?ga=GA1.1.2094443500.1708599870&semt=sph",
+  const images: { src: string, colSpan?: string, rowSpan?: string }[] = [
+    { src: "https://i.ibb.co/54V9w6z/IMG-8783r.png", colSpan: 'col-span-2', rowSpan: 'row-span-2' },
+    { src: "https://i.ibb.co/5MZ6Hgm/IMG-8766r.jpg", colSpan: 'col-span-1', rowSpan: 'row-span-1' },
+    { src: "https://i.ibb.co/GWD3GwT/IMG-8783.jpg", colSpan: 'col-span-1', rowSpan: 'row-span-2' },
+    { src: "https://i.ibb.co/qB4MR7Z/IMG-9014.jpg", colSpan: 'col-span-2', rowSpan: 'row-span-1' },
+    { src: "https://i.ibb.co/XJfgd0M/IMG-8498.jpg", colSpan: 'col-span-1', rowSpan: 'row-span-1' },
+  ];
 
-	];
-	return (
-		<div className="p-5 md:p-10">
-			<h1>Portfolio</h1>
-		<div className="columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
-			{images.map((src, index) => (
-				<img key={index} src={src} alt={`Masonry item ${index + 1}`} />
-			))}
-		</div>
-	</div>
-	)
-}
+  return (
+    <div className="p-5 md:p-10 mt-16">
+      <h1 className='text-center font-gallient text-5xl mb-8'>Portfolio</h1>
+      <div className="grid grid-cols-masonry gap-5 lg:gap-8">
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image.src}
+            alt={`Masonry item ${index + 1}`}
+            className={`${image.colSpan} ${image.rowSpan} w-full h-auto object-cover`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default _Portfolio
+export default _Portfolio;
